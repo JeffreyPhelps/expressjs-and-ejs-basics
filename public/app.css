@@ -1,0 +1,7 @@
+/* Stylesheet being served via the app.js file */
+
+body {
+    background-color: yellow;
+    color: purple;
+}
+

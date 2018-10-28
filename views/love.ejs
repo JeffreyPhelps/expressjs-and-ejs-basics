@@ -1,5 +1,22 @@
+<!-- ejs (Embedded JavaScript): Allowing for javascript to be embedded within HTML.  -->
 
+<!-- The "fellinlovewith" page: Accessed from within app.js routs -->
 
-<h2>You fell in love with: <%= thingVar.toUpperCase() %></h2>
+<!-- Adding the header from the partials directory -->
+<% include partials/header %>
 
-<h3>...a message from love.ejs</h3>
+<!-- Accessing thingVar from app.js, within an h2 and forcing text to uppercase  -->
+<h2>You fell in love with: <%= thingVar.toUpperCase() %>!!!</h2>
+
+<!-- Using if/else statements within ejs to change text on the page, depending on the route from app.js -->
+<% if(thingVar.toLowerCase() === "jeff"){ %> <!-- ejs tags must wrap around each individual line of code -->
+    <p>Good Choice! <%= thingVar.toUpperCase() %> is the best!!!</p>
+<% } else { %> <!-- ejs tags must wrap around each individual line of code -->
+    <p>Not the best choice, however... You should have chosen Jeff.</p>
+<% } %> <!-- ejs tags must wrap around each individual line of code -->
+
+<h3>...A message from love.ejs</h3>
+
+<!-- Adding the footer from the partials directory -->
+<% include partials/footer %>
+

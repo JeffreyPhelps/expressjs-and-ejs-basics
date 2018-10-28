@@ -1,0 +1,25 @@
+<!-- ejs (Embedded JavaScript): Allowing for javascript to be embedded within HTML.  -->
+
+<!-- Posts page: Accessed from within app.js routs -->
+
+
+<!-- Adding the header from the partials directory -->
+<% include partials/header %>
+
+<h2>The Posts Page</h2>
+
+<!-- Rolling through each post, from the array of posts in the app.js route, and displaying them in a list  -->
+<% posts.forEach(function(post){ %>
+    <li><%= "Title: " + post.title + " - Author: " + post.author %></li>
+<% }); %>
+
+<br>
+
+<!-- Using a for loop, instead of the above forEach loop to accomplish the same thing  -->
+<% for(var i = 0; i < posts.length; i++){ %>
+    <li><%= "Title: " + posts[i].title + " - Author: " + posts[i].author %></li>
+<% } %>
+
+<!-- Adding the footer from the partials directory -->
+<% include partials/footer %>
+
